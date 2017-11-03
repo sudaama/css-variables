@@ -5,11 +5,15 @@
   <title>Scoped CSS Variables and JS</title>
 </head>
 <body>
+  
   <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
-
+  <h1 class="hl rex">Big Size h1 to the <span class="bigsah">Rescue</span> again</h1>
   <div class="controls">
     <label for="spacing">Spacing:</label>
     <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="sizing">Sizing:</label>
+    <input id="sizing" type="range" name="sizing" min="15" max="100" value="20" data-sizing="px">
 
     <label for="blur">Blur:</label>
     <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px" >
@@ -48,6 +52,7 @@
       --base: yellow;
       --spacing: 50px;
       --blur: 10px;
+      --sizing: 15px;
     }
 
     img {
@@ -58,6 +63,15 @@
 
     .hl {
       color: var(--base);
+    }
+
+    .bigsah {
+      font-size: var(--sizing);
+    }
+
+    h1.rex {
+      font-style: 25px;
+      filter: blur(var(--blur));
     }
   </style>
 
